@@ -2,8 +2,8 @@ describe('end-2-end покупка Аватара', function () {
 
     it('end-2-end покупка Аватара', function () {
          cy.visit('https://pokemonbattle.ru/login');
-         cy.get(':nth-child(1) > .auth__input').type('Fase2123@yandex.ru');
-         cy.get('#password').type('Paha556556');
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN');
+         cy.get('#password').type('USER_PASSWORD');
          cy.get('.auth__button').click();
          cy.wait(2000)
          cy.get('.header__btn_active').should('be.visible');
